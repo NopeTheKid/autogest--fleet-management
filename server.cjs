@@ -47,7 +47,7 @@ transporter.verify(function(error, success) {
 // --- DAILY CHECK SCHEDULER (04:00 AM) ---
 cron.schedule('0 4 * * *', () => {
   console.log(`[${new Date().toISOString()}] Running daily notification check...`);
-  // checkAndSendNotifications();  // TODO: Uncomment this line to enable daily email notifications
+  checkAndSendNotifications();  // TODO: Uncomment this line to enable daily email notifications
 });
 
 const checkAndSendNotifications = () => {
