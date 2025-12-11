@@ -110,7 +110,7 @@ const Dashboard: React.FC<DashboardProps> = ({ vehicles, onNavigate }) => {
   return (
     <div className="flex flex-col gap-8">
       {/* KPI Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         <div className="bg-surface-dark p-6 rounded-2xl border border-surface-dark-lighter shadow-sm flex flex-col justify-between h-32 relative overflow-hidden group">
           <div className="absolute right-0 top-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
             <span className="material-symbols-outlined text-[64px] text-primary">directions_car</span>
