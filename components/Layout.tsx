@@ -1,7 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { ViewState, Vehicle } from '../types';
-import { dbService } from '../db';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -35,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children, currentView, setView, title, 
     const checkApiStatus = async () => {
       try {
         // We only need to check if the endpoint is reachable, so we can use HEAD to be more efficient
-        const response = await fetch('http://localhost:3001/api/vehicles', { method: 'HEAD' });
+        const response = await fetch(import.meta.env.VITE_API_URL, { method: 'HEAD' });
         if (response.ok) {
           setApiStatus('online');
         } else {

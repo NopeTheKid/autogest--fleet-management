@@ -1,4 +1,4 @@
-
+import { v4 as uuidv4 } from 'uuid';
 import React, { useState, useRef } from 'react';
 import { Vehicle } from '../types';
 
@@ -152,7 +152,7 @@ const AddVehicleModal: React.FC<AddVehicleModalProps> = ({ onClose, onSave, vehi
     };
 
     const newVehicle: Vehicle = {
-      id: vehicleToEdit ? vehicleToEdit.id : crypto.randomUUID(), // Preserve ID if editing
+      id: vehicleToEdit ? vehicleToEdit.id : uuidv4(), // Preserve ID if editing
       make: formData.make!,
       model: formData.model!,
       year: Number(formData.year),

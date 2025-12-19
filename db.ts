@@ -1,7 +1,7 @@
 
 import { Vehicle } from './types';
 
-const API_URL = 'http://localhost:3001/api/vehicles';
+const API_URL = import.meta.env.VITE_API_URL; // TODO: Move to config
 
 class DatabaseService {
   async init() {
