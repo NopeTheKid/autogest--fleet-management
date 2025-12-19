@@ -9,7 +9,8 @@ export default defineConfig(({ mode }) => {
         allowedHosts: [
           'helios',
           '100.101.89.21',
-          'helios.tail5b8966.ts.net'
+          'helios.tail5b8966.ts.net',
+          'auto.nopearino.pt'
         ],
         port: 3000,
         host: '0.0.0.0',
