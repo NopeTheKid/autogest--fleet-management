@@ -7,6 +7,8 @@
 ``` .env
 # Server Port
 PORT=3001
+# The vehicle API
+VITE_API_URL=''
 
 # Nodemailer Gmail Configuration
 # The email address used to send notifications.
